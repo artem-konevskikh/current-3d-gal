@@ -18,6 +18,9 @@
         <a-asset-item id="sofas" src="assets/models/sofas.gltf"></a-asset-item>
         <a-asset-item id="cloths" src="assets/models/cloths.gltf"></a-asset-item>
         <video id="video-doc" loop="true" src="assets/videos/doc_web720p.mp4"></video>
+        <video id="video-research" loop="true" src="assets/videos/video1_320.mp4"></video>
+        <video id="video-current" loop="true" src="assets/videos/video2_320.mp4"></video>
+        <video id="video-gan" loop="true" src="assets/videos/video3.mp4"></video>
       </a-assets>
 
 
@@ -38,13 +41,28 @@
       ></a-entity>
       <a-entity
         gltf-model="#cloths"
-        position="0 -0.2 0"
+        position="0 0.1 0"
       ></a-entity>
       <a-video
               src="#video-doc"
               width="8" height="4.5"
               rotation="0 180 0"
               position="8 5 13.7">
+      </a-video>
+      <a-video
+              src="#video-research"
+              width="12" height="6.75"
+              position="-18.5 5 -25.6">
+      </a-video>
+      <a-video
+              src="#video-current"
+              width="12" height="6.75"
+              position="0 5 -25.6">
+      </a-video>
+      <a-video
+              src="#video-gan"
+              width="12" height="6.75"
+              position="18.5 5 -25.6">
       </a-video>
 
 
