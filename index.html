@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Current</title>
+    <meta name="description" content="Current">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+<!--    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>-->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #FAFAFA" renderer='precision: medium'>
+
+      <a-assets>
+        <a-asset-item id="walls" src="assets/models/gallery_v4/walls.gltf"></a-asset-item>
+        <a-asset-item id="collision" src="assets/models/gallery_v4/gallery_v4_collision.obj"></a-asset-item>
+        <a-asset-item id="sofas" src="assets/models/gallery_v4/sofas.gltf"></a-asset-item>
+        <video id="video-doc" loop="true" src="assets/videos/doc_web720p.mp4"></video>
+        <a-asset-item id="post-tall" src="assets/models/gallery_space_half_weird/tall.gltf"></a-asset-item>
+      </a-assets>
+
+
+
+      <a-entity
+        obj-model="obj:#collision"
+        position="0 0.2 0"
+        material="opacity: 0.0; transparent: true"
+        nav-mesh
+      ></a-entity>
+      <a-entity
+        gltf-model="#walls"
+        position="0 0.2 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#sofas"
+        position="0 -0.2 0"
+      ></a-entity>
+      <a-video
+              src="#video-doc"
+              width="8" height="4.5"
+              rotation="0 180 0"
+              position="8 5 13.7">
+      </a-video>
+      <a-entity
+              gltf-model="#post-long"
+              position="0 0.2 0"
+              scale="3 3 3"
+      ></a-entity>
+<!--      <a-entity-->
+<!--              gltf-model="#post-horizontal"-->
+<!--              position="0.5 0.1 0.3"-->
+<!--      ></a-entity>-->
+<!--      <a-entity-->
+<!--              gltf-model="#post-tall"-->
+<!--              position="-4 0.1 -5.8"-->
+<!--              scale="3 3 3"-->
+<!--      ></a-entity>-->
+<!--      <a-image-->
+<!--              src="#my-image"-->
+<!--              position="-3.8 2 -3.3"-->
+<!--              width="2" height="4"-->
+<!--      ></a-image>-->
+<!--      <a-image-->
+<!--              src="#my-image"-->
+<!--              position="0 0.7 0"-->
+<!--              rotation="270 0 0"-->
+<!--              width="2" height="4"-->
+<!--              scale="5 5 5"-->
+<!--      ></a-image>-->
+
+
+      <a-entity
+              environment="preset: starry;
+              groundColor: #445;
+              lightPosition: 0 1 1;
+              grid: none"
+      ></a-entity>
+
+      <a-entity
+              id="rig"
+              position="0 0 20"
+              movement-controls="constrainToNavMesh: true"
+      >
+        <a-entity
+                camera
+                position="0 1.7 0"
+                look-controls="pointerLockEnabled: true"
+        >
+          <a-cursor></a-cursor>
+        </a-entity>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
