@@ -13,11 +13,11 @@
     <a-scene background="color: #FAFAFA" renderer='precision: medium'>
 
       <a-assets>
-        <a-asset-item id="walls" src="assets/models/gallery_v4/walls.gltf"></a-asset-item>
-        <a-asset-item id="collision" src="assets/models/gallery_v4/gallery_v4_collision.obj"></a-asset-item>
-        <a-asset-item id="sofas" src="assets/models/gallery_v4/sofas.gltf"></a-asset-item>
+        <a-asset-item id="walls" src="assets/models/walls.gltf"></a-asset-item>
+        <a-asset-item id="collision" src="assets/models/gallery_v4_collision.obj"></a-asset-item>
+        <a-asset-item id="sofas" src="assets/models/sofas.gltf"></a-asset-item>
+        <a-asset-item id="cloths" src="assets/models/cloths.gltf"></a-asset-item>
         <video id="video-doc" loop="true" src="assets/videos/doc_web720p.mp4"></video>
-        <a-asset-item id="post-tall" src="assets/models/gallery_space_half_weird/tall.gltf"></a-asset-item>
       </a-assets>
 
 
@@ -34,6 +34,10 @@
       ></a-entity>
       <a-entity
         gltf-model="#sofas"
+        position="0 -0.2 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#cloths"
         position="0 -0.2 0"
       ></a-entity>
       <a-video
