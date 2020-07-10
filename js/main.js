@@ -14,3 +14,4 @@ document.addEventListener('DOMContentLoaded', function() {
         splash.style.display = 'none';
     });
 });
+

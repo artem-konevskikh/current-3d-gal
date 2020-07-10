@@ -27,10 +27,16 @@
         <a-asset-item id="cloths" src="assets/models/cloths.gltf"></a-asset-item>
         <a-asset-item id="emergent" src="assets/models/emergent.gltf"></a-asset-item>
         <a-asset-item id="new-cloths" src="assets/models/new-cloths.gltf"></a-asset-item>
-        <video id="video-doc" loop="true" src="assets/videos/doc_web720p.mp4"></video>
-        <video id="video-research" loop="true" src="assets/videos/video1_320.mp4"></video>
-        <video id="video-current" loop="true" src="assets/videos/video2_320.mp4"></video>
-        <video id="video-gan" loop="true" src="assets/videos/video3.mp4"></video>
+        <video
+                id="video-doc"
+                src="assets/videos/doc_web720p.mp4"
+                autoplay loop="true"
+                playsinline webkit-playsinline
+                controls
+        ></video>
+        <video id="video-research" autoplay loop="true" src="assets/videos/video1_320.mp4"></video>
+        <video id="video-current" autoplay loop="true" src="assets/videos/video2_320.mp4"></video>
+        <video id="video-gan" autoplay loop="true" src="assets/videos/video3.mp4"></video>
       </a-assets>
 
 
@@ -65,23 +71,27 @@
               src="#video-doc"
               width="8" height="4.5"
               rotation="0 180 0"
-              position="8 5 13.7">
-      </a-video>
+              position="8 5 13.7"
+              handler
+      ></a-video>
       <a-video
               src="#video-research"
               width="12" height="6.75"
-              position="-18.5 5 -25.6">
-      </a-video>
+              position="-18.5 5 -25.65"
+              handler
+      ></a-video>
       <a-video
               src="#video-current"
               width="12" height="6.75"
-              position="0 5 -25.6">
-      </a-video>
+              position="0 5 -25.65"
+              handler
+      ></a-video>
       <a-video
               src="#video-gan"
               width="12" height="6.75"
-              position="18.5 5 -25.6">
-      </a-video>
+              position="18.5 5 -25.65"
+              handler
+      ></a-video>
 
 
       <a-entity
@@ -95,6 +105,7 @@
               id="rig"
               position="0 0 20"
               movement-controls="constrainToNavMesh: true"
+              listener
       >
         <a-entity
                 camera
@@ -106,5 +117,6 @@
       </a-entity>
 
     </a-scene>
+  <script src="js/video.js"></script>
   </body>
 </html>
