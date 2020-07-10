@@ -27,16 +27,13 @@
         <a-asset-item id="cloths" src="assets/models/cloths.gltf"></a-asset-item>
         <a-asset-item id="emergent" src="assets/models/emergent.gltf"></a-asset-item>
         <a-asset-item id="new-cloths" src="assets/models/new-cloths.gltf"></a-asset-item>
-        <video
-                id="video-doc"
-                src="assets/videos/doc_web720p.mp4"
-                autoplay loop="true"
-                playsinline webkit-playsinline
-                controls
-        ></video>
+        <a-asset-item id="bear" src="assets/secrets/bear.gltf"></a-asset-item>
+
+        <video id="video-doc" autoplay loop="true"  src="assets/videos/doc_web720p.mp4"></video>
         <video id="video-research" autoplay loop="true" src="assets/videos/video1_320.mp4"></video>
         <video id="video-current" autoplay loop="true" src="assets/videos/video2_320.mp4"></video>
         <video id="video-gan" autoplay loop="true" src="assets/videos/video3.mp4"></video>
+        <video id="video-bear" autoplay loop="true" src="assets/secrets/bear_web720p.mp4"></video>
       </a-assets>
 
 
@@ -95,11 +92,18 @@
 
 
       <a-entity
-              environment="preset: starry;
-              groundColor: #445;
-              lightPosition: 0 1 1;
-              grid: none"
+        gltf-model="#bear"
+        position="-18 0.1 22"
+        rotation="0 -60 0"
+        scale="0.15 0.15 0.15"
       ></a-entity>
+      <a-video
+              src="#video-gan"
+              width="4" height="2.25"
+              position="-13 3 19"
+              rotation="10 -60 0"
+              handler
+      ></a-video>
 
       <a-light intensity="0.1" position="0 5 0"></a-light>
       <a-light type="point" intensity="0.1" position="0 5 20"></a-light>
@@ -113,7 +117,14 @@
       <a-light type="point" intensity="0.1" position="11.80 5 -9.70"></a-light>
       <a-light type="point" intensity="0.1" position="13.40 5 3.40"></a-light>
 
-<!--      <a-light type="point" color="blue" position="0 5 0"></a-light>-->
+
+      <a-entity
+              environment="preset: starry;
+              groundColor: #445;
+              lightPosition: 0 1 1;
+              grid: none"
+      ></a-entity>
+
 
       <a-entity
               id="rig"
