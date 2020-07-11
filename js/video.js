@@ -37,7 +37,7 @@ AFRAME.registerComponent('listener', {
     } else {
       video4.pause();
     }
-    if ((userPosition["z"] <= 15.4) && (userPosition["z"] > -25) && (userPosition["x"] > -25.55) && (userPosition["x"] < -4.7)) {
+    if ((userPosition["z"] <= 25) && (userPosition["z"] > 15.4) && (userPosition["x"] > -25.55) && (userPosition["x"] < -4.7)) {
       video5.play();
     } else {
       video5.pause();
