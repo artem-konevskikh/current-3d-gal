@@ -21,12 +21,12 @@
     <a-scene background="color: #FAFAFA" renderer='precision: medium' vr-mode-ui="enabled: false">
 
       <a-assets>
-        <a-asset-item id="walls" src="assets/models/walls2.gltf"></a-asset-item>
-        <a-asset-item id="collision" src="assets/models/gallery_v4_collision.obj"></a-asset-item>
+        <a-asset-item id="walls" src="assets/models/new/walls.gltf"></a-asset-item>
+        <a-asset-item id="collision" src="assets/models/new/sculpted_gallery_v02_collision.obj"></a-asset-item>
         <a-asset-item id="sofas" src="assets/models/sofas.gltf"></a-asset-item>
-        <a-asset-item id="cloths" src="assets/models/cloths.gltf"></a-asset-item>
+        <a-asset-item id="cloths" src="assets/models/new/cloths_new.gltf"></a-asset-item>
         <a-asset-item id="emergent" src="assets/models/emergent.gltf"></a-asset-item>
-        <a-asset-item id="new-cloths" src="assets/models/new-cloths.gltf"></a-asset-item>
+<!--        <a-asset-item id="new-cloths" src="assets/models/new-cloths.gltf"></a-asset-item>-->
         <a-asset-item id="bear" src="assets/secrets/bear.gltf"></a-asset-item>
 
         <video id="video-doc" autoplay loop="true"  src="assets/videos/doc_web720p.mp4"></video>
@@ -54,16 +54,16 @@
       ></a-entity>
       <a-entity
         gltf-model="#cloths"
-        position="0 0.1 0"
+        position="0 0.2 0"
       ></a-entity>
       <a-entity
         gltf-model="#emergent"
         position="0 0.1 0"
       ></a-entity>
-      <a-entity
-        gltf-model="#new-cloths"
-        position="0 0.1 0"
-      ></a-entity>
+<!--      <a-entity-->
+<!--        gltf-model="#new-cloths"-->
+<!--        position="0 0.1 0"-->
+<!--      ></a-entity>-->
       <a-video
               src="#video-doc"
               width="8" height="4.5"
