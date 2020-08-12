@@ -114,7 +114,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd Diffraction_by_oil_on_water.jpeg
+map_Kd abstract.jpg
 Ni 1.00
 newmtl yanzi_20200708_0151:sofeirdo_lowered:phong1SG
 illum 4
