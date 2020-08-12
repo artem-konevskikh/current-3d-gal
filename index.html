@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
 <!--    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>-->
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
@@ -24,7 +26,7 @@
         <a-asset-item id="walls" src="assets/models/new/walls.gltf"></a-asset-item>
         <a-asset-item id="collision" src="assets/models/new/sculpted_gallery_v02_collision.obj"></a-asset-item>
         <a-asset-item id="sofas" src="assets/models/sofas.gltf"></a-asset-item>
-        <a-asset-item id="cloths" src="assets/models/new/cloths_new.gltf"></a-asset-item>
+        <a-asset-item id="cloths" src="assets/models/new/test_cloths.gltf"></a-asset-item>
         <a-asset-item id="emergent" src="assets/models/emergent.gltf"></a-asset-item>
 <!--        <a-asset-item id="new-cloths" src="assets/models/new-cloths.gltf"></a-asset-item>-->
         <a-asset-item id="bear" src="assets/secrets/bear.gltf"></a-asset-item>
@@ -47,6 +49,7 @@
       <a-entity
         gltf-model="#walls"
         position="0 0.2 0"
+        mirror
       ></a-entity>
       <a-entity
         gltf-model="#sofas"
@@ -164,7 +167,8 @@
       >
         <a-entity
                 camera
-                position="0 2 0"
+                fov="120"
+                position="0 2.2 0"
                 look-controls="pointerLockEnabled: true"
         >
           <a-cursor></a-cursor>
